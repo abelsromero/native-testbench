@@ -1,0 +1,4 @@
+plugins {
+    id 'org.abelsromero.nativ.java-common-conventions'
+    id 'application'
+}

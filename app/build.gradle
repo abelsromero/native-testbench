@@ -1,0 +1,11 @@
+plugins {
+    id 'org.abelsromero.nativ.java-application-conventions'
+}
+
+dependencies {
+    implementation project(':utilities')
+}
+
+application {
+    mainClass = 'org.abelsromero.nativ.App'
+}

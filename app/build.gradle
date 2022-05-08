@@ -1,5 +1,6 @@
 plugins {
     id 'org.abelsromero.nativ.java-application-conventions'
+    id 'org.graalvm.buildtools.native' version '0.9.11'
 }
 
 dependencies {

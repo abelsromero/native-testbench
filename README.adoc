@@ -1,0 +1,43 @@
+= Java Native test bench 🛠️
+ifdef::env-github,env-browser[]
+:toc: preamble
+endif::[]
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:badges:
+:tag: main
+:!toc-title:
+:tip-caption: :bulb:
+:note-caption: :paperclip:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+Several examples of how to build Java apps into native images.
+To provide some minimal complexity, the project contains:
+
+* `app` module containing the main class
+* `utilities` modules acting as extra dependency for `app`
+
+== Requirements
+
+* GraalVM installation
+
+WARNING: Development is done in Linux, no results are not guaranteed to be reproducible in other OS.
+
+== References
+
+* https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html[Gradle plugin for GraalVM Native Image building]
+
+== Base app
+
+* Java build
+
+ ./gradlew installDist
+ java -cp "app/build/install/app/lib/*" org.abelsromero.nativ.App
+
+* Native build
+
+ ./gradlew :app:nativeCompile
+ ./app/build/native/nativeCompile/app
